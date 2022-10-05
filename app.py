@@ -1,4 +1,6 @@
-from flask import Flask, request, render_template, send_from_directory
+from flask import Flask, request, render_template, send_from_directory, jsonify
+
+
 from utils import *
 
 # Для правильной склейки путей
@@ -47,7 +49,11 @@ def page_post(path):
 
     result = get_post_by_pk(path)
 
-    com = get_comments_by_post_id(path)
+    try:
+        com = get_comments_by_post_id(path)
+    except ValueError:
+        return "Пост не найден"
+
     com_len = len(com)
 
     context = {
@@ -64,16 +70,17 @@ def user_name(path):
     """"
     Реализует вывод по пользователю
     """
+    try:
+        posts = get_posts_by_user(path.lower())
 
-    posts = get_posts_by_user(path.lower())
-
-    context = {
-            "quantity": len(posts),
-            "word": path,
-            "posts_all": posts,
-            "title": "Все посты пользователя"
-                  }
-
+        context = {
+                "quantity": len(posts),
+                "word": path,
+                "posts_all": posts,
+                "title": "Все посты пользователя"
+                      }
+    except ValueError:
+        return "Пользователь не найден"
     return render_template("user-feed.html", **context)
 
 
@@ -119,11 +126,29 @@ def search_by_word():
     return render_template('search.html', **context)
 
 
-
-
 @app.route("/uploads/<path:path>")
 def static_dir(path):
     return send_from_directory("uploads", path)
+
+
+
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+    Обработчик для не существующих страниц
+    """
+    return jsonify(error=str(e)), 404
+
+
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    """
+    Обработчик для ошибок сервера
+    """
+    return jsonify(error=str(e)), 500
 
 
 if __name__ == '__main__':

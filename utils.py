@@ -1,4 +1,5 @@
 import json
+from json import JSONDecodeError
 
 # Для правильной склейки путей
 import os
@@ -8,7 +9,12 @@ COM_PATH = os.path.join("data", "comments.json")
 
 def get_posts_all() -> list[dict]:
     with open(POST_PATH, 'r', encoding='utf-8') as file:
-        return json.load(file)
+        try:
+            return json.load(file)
+        except FileNotFoundError:
+            return "Файл не найден"
+        except JSONDecodeError:
+            return "Файл не удается преобразовать"
 
 
 def get_post_by_pk(n):
@@ -32,18 +38,30 @@ def search_for_posts(word):
 
 def get_posts_by_user(user_name):
     result = get_posts_all()
+
+    is_exists = False
     lst_names = []
 
     for posts in result:
         if user_name.lower() in posts['poster_name'].lower():
             lst_names.append(posts)
+            is_exists = True
+
+    if not is_exists:
+        raise ValueError
+
     return lst_names
 
 
 # Получает все комментарии
 def get_comments_all() -> list[dict]:
     with open(COM_PATH, 'r', encoding='utf-8') as file:
-        return json.load(file)
+        try:
+            return json.load(file)
+        except FileNotFoundError:
+            return "Файл не найден"
+        except JSONDecodeError:
+            return "Файл не удается преобразовать"
 
 
 # Получает комментарии по id
@@ -51,8 +69,13 @@ def get_comments_by_post_id(needed_com):
     result = get_comments_all()
     lst = []
 
+    is_exists = False
     for com in result:
         if com["post_id"] == needed_com:
+            is_exists = True
             lst.append(com)
+
+    if not is_exists:
+        raise ValueError
 
     return lst
