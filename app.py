@@ -12,12 +12,12 @@ UPLOAD_FOLDER = os.path.join("uploads", "images")
 IMG_FOLDER = os.path.join("static", "img")
 LOG_FOLDER = os.path.join('logs', 'api.log')
 
-
 app = Flask(__name__)
 
-app.config['JSON_AS_ASCII'] = False
+app.config["JSON_AS_ASCII"] = False
 
-logging.basicConfig(filename=LOG_FOLDER, level=logging.INFO, format=f'%(asctime)s [%(levelname)s] %(message)s')
+logging.basicConfig(filename=LOG_FOLDER, level=logging.INFO, format=f"%(asctime)s [%(levelname)s] %(message)s")
+
 
 @app.route("/")
 def page_index():
@@ -40,15 +40,15 @@ def page_tag():
     """
     Поиск по тэгам
     """
-
     pass
 
 
 @app.route("/post/<path:path>")
 def page_post(path):
     """
-    реализует просмотр поста
-    :return:
+    реализует просмотр поста,
+    обрабатывает ошибки,
+    если пост не найден
     """
 
     result = get_post_by_pk(int(path))
@@ -69,51 +69,56 @@ def page_post(path):
 
     return render_template("post.html", **context)
 
-@app.route('/users/<path:path>')
+
+@app.route("/users/<path:path>")
 def user_name(path):
     """"
-    Реализует вывод по пользователю
+    Реализует вывод по пользователю,
+    обабатывает ошибки,
+    если пользователь не найден
     """
     try:
         posts = get_posts_by_user(path.lower())
 
         context = {
-                "quantity": len(posts),
-                "word": path,
-                "posts_all": posts,
-                "title": "Все посты пользователя"
-                      }
+            "quantity": len(posts),
+            "word": path,
+            "posts_all": posts,
+            "title": "Все посты пользователя"
+        }
     except ValueError:
         return "Пользователь не найден"
     return render_template("user-feed.html", **context)
 
 
-
-
-@app.route('/user-feed', methods=['POST'])
+@app.route("/user-feed", methods=["POST"])
 def search_by_user():
-
-    if request.method == 'POST':
+    """
+    Реализует поиск по пользователю,
+    выводит все посты пользователя
+    """
+    if request.method == "POST":
         search_word = request.form['key_word']
 
         posts = get_posts_by_user(search_word.lower())
-
 
         context = {
             "quantity": len(posts),
             "word": search_word,
             "posts_all": posts,
             "title": "Все посты пользователя"
-                  }
+        }
 
     return render_template("user-feed.html", **context)
 
 
-@app.route('/search', methods=['POST'])
+@app.route("/search", methods=["POST"])
 def search_by_word():
-
-    if request.method == 'POST':
-        search_word = request.form['key_word']
+    """
+    Представление для поиска по слову
+    """
+    if request.method == "POST":
+        search_word = request.form["key_word"]
 
         posts = search_for_posts(search_word.lower())
 
@@ -125,17 +130,9 @@ def search_by_word():
             "word": search_word,
             "posts_all": posts,
             "title": "Результат поиска"
-                  }
+        }
 
-    return render_template('search.html', **context)
-
-
-@app.route("/uploads/<path:path>")
-def static_dir(path):
-    return send_from_directory("uploads", path)
-
-
-
+    return render_template("search.html", **context)
 
 
 @app.errorhandler(404)
@@ -146,7 +143,6 @@ def page_not_found(e):
     return str(e), 404
 
 
-
 @app.errorhandler(500)
 def internal_server_error(e):
     """
@@ -155,11 +151,10 @@ def internal_server_error(e):
     return str(e), 500
 
 
-
 @app.route("/api/posts")
 def api_post():
     """
-    представление, которое обрабатывает запрос GET /api/posts
+    Представление, которое обрабатывает запрос GET /api/posts
     и возвращает полный список постов в виде JSON-списка
     """
 
@@ -173,19 +168,16 @@ def api_post():
 @app.route("/api/posts/<path:path>")
 def api_post_id(path):
     """
-    представление, которое обрабатывает запрос GET /api/posts/<post_id>
+    Представление, которое обрабатывает запрос GET /api/posts/<post_id>
     и возвращает один пост в виде JSON-словаря
     """
 
     result = get_post_by_pk(int(path))
 
-    app.logger.info('Query')
+    app.logger.info("Query")
 
     return jsonify(result)
 
 
-
 if __name__ == '__main__':
     app.run(debug=True)
-
-

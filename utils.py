@@ -7,8 +7,13 @@ import os
 POST_PATH = os.path.join("data", "posts.json")
 COM_PATH = os.path.join("data", "comments.json")
 
+
 def get_posts_all() -> list[dict]:
-    with open(POST_PATH, 'r', encoding='utf-8') as file:
+    """
+    Получаем все посты из файла,
+    обработка ошибок при проблемах с открытием файлов
+    """
+    with open(POST_PATH, "r", encoding="utf-8") as file:
         try:
             return json.load(file)
         except FileNotFoundError:
@@ -18,6 +23,9 @@ def get_posts_all() -> list[dict]:
 
 
 def get_post_by_pk(n):
+    """
+    Получаем пост по post id (pk)
+    """
     result = get_posts_all()
 
     for el in result:
@@ -25,25 +33,30 @@ def get_post_by_pk(n):
             return el
 
 
-
 def search_for_posts(word):
+    """
+    Поиск по слову
+    """
     result = get_posts_all()
     lst_result = []
 
     for posts in result:
-        if word.lower() in posts['content'].lower():
+        if word.lower() in posts["content"].lower():
             lst_result.append(posts)
     return lst_result
 
 
 def get_posts_by_user(user_name):
+    """
+    Поиск по имени пользователя
+    """
     result = get_posts_all()
 
     is_exists = False
     lst_names = []
 
     for posts in result:
-        if user_name.lower() in posts['poster_name'].lower():
+        if user_name.lower() in posts["poster_name"].lower():
             lst_names.append(posts)
             is_exists = True
 
@@ -53,9 +66,12 @@ def get_posts_by_user(user_name):
     return lst_names
 
 
-# Получает все комментарии
 def get_comments_all() -> list[dict]:
-    with open(COM_PATH, 'r', encoding='utf-8') as file:
+    """
+    Получаем все комментарии,
+    обработка ошибок при проблеме открытия файлов json
+    """
+    with open(COM_PATH, "r", encoding="utf-8") as file:
         try:
             return json.load(file)
         except FileNotFoundError:
@@ -64,8 +80,11 @@ def get_comments_all() -> list[dict]:
             return "Файл не удается преобразовать"
 
 
-# Получает комментарии по id
 def get_comments_by_post_id(needed_com):
+    """
+    Получает комментарии по id,
+    обработка ошибок, если комментарий не существует
+    """
     result = get_comments_all()
     lst = []
 
