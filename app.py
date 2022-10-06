@@ -50,10 +50,10 @@ def page_post(path):
     обрабатывает ошибки,
     если пост не найден
     """
-
-    result = get_post_by_pk(int(path))
-
     try:
+        result = get_post_by_pk(int(path))
+
+
         com = get_comments_by_post_id(int(path))
     except ValueError:
         return "Пост не найден"
@@ -140,6 +140,7 @@ def page_not_found(e):
     """
     Обработчик для не существующих страниц
     """
+    e = "404: Страница не найдена"
     return str(e), 404
 
 
@@ -148,6 +149,7 @@ def internal_server_error(e):
     """
     Обработчик для ошибок сервера
     """
+    e = "500: Ошибок сервера"
     return str(e), 500
 
 

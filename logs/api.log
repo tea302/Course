@@ -65,3 +65,158 @@
 2022-10-06 20:26:24,025 [INFO] 127.0.0.1 - - [06/Oct/2022 20:26:24] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
 2022-10-06 20:26:24,032 [INFO] 127.0.0.1 - - [06/Oct/2022 20:26:24] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
 2022-10-06 20:26:24,032 [INFO] 127.0.0.1 - - [06/Oct/2022 20:26:24] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:06:07,797 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-06 21:06:07,797 [INFO] [33mPress CTRL+C to quit[0m
+2022-10-06 21:06:07,797 [INFO]  * Restarting with stat
+2022-10-06 21:06:08,341 [WARNING]  * Debugger is active!
+2022-10-06 21:06:08,352 [INFO]  * Debugger PIN: 777-380-062
+2022-10-06 21:06:08,725 [INFO] 127.0.0.1 - - [06/Oct/2022 21:06:08] "GET /users/leo HTTP/1.1" 200 -
+2022-10-06 21:06:08,902 [INFO] 127.0.0.1 - - [06/Oct/2022 21:06:08] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:06:08,910 [INFO] 127.0.0.1 - - [06/Oct/2022 21:06:08] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:06:08,918 [INFO] 127.0.0.1 - - [06/Oct/2022 21:06:08] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:12:50,649 [INFO] 127.0.0.1 - - [06/Oct/2022 21:12:50] "GET / HTTP/1.1" 200 -
+2022-10-06 21:12:50,691 [INFO] 127.0.0.1 - - [06/Oct/2022 21:12:50] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:12:50,713 [INFO] 127.0.0.1 - - [06/Oct/2022 21:12:50] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:12:50,713 [INFO] 127.0.0.1 - - [06/Oct/2022 21:12:50] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:12:53,986 [INFO] 127.0.0.1 - - [06/Oct/2022 21:12:53] "POST /search HTTP/1.1" 200 -
+2022-10-06 21:12:54,048 [INFO] 127.0.0.1 - - [06/Oct/2022 21:12:54] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:12:54,073 [INFO] 127.0.0.1 - - [06/Oct/2022 21:12:54] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:12:54,073 [INFO] 127.0.0.1 - - [06/Oct/2022 21:12:54] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:14:49,857 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-06 21:14:49,857 [INFO] [33mPress CTRL+C to quit[0m
+2022-10-06 21:14:49,857 [INFO]  * Restarting with stat
+2022-10-06 21:14:50,295 [WARNING]  * Debugger is active!
+2022-10-06 21:14:50,300 [INFO]  * Debugger PIN: 777-380-062
+2022-10-06 21:14:53,761 [INFO] 127.0.0.1 - - [06/Oct/2022 21:14:53] "GET /users/leo HTTP/1.1" 200 -
+2022-10-06 21:14:53,889 [INFO] 127.0.0.1 - - [06/Oct/2022 21:14:53] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:14:53,889 [INFO] 127.0.0.1 - - [06/Oct/2022 21:14:53] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:14:53,900 [INFO] 127.0.0.1 - - [06/Oct/2022 21:14:53] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:14:57,932 [INFO] 127.0.0.1 - - [06/Oct/2022 21:14:57] "GET / HTTP/1.1" 200 -
+2022-10-06 21:14:57,964 [INFO] 127.0.0.1 - - [06/Oct/2022 21:14:57] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:14:57,985 [INFO] 127.0.0.1 - - [06/Oct/2022 21:14:57] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:14:57,985 [INFO] 127.0.0.1 - - [06/Oct/2022 21:14:57] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:15:01,324 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:01] "GET /post/1 HTTP/1.1" 200 -
+2022-10-06 21:15:01,363 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:01] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:15:01,377 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:01] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:15:01,386 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:01] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:15:06,195 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:06] "GET / HTTP/1.1" 200 -
+2022-10-06 21:15:06,246 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:06] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:15:06,262 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:06] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:15:06,262 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:06] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:15:09,697 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:09] "POST /search HTTP/1.1" 200 -
+2022-10-06 21:15:09,727 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:09] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:15:09,749 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:09] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:15:09,749 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:09] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:15:13,948 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:13] "GET /post/1 HTTP/1.1" 200 -
+2022-10-06 21:15:13,994 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:13] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:15:14,011 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:14] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:15:14,018 [INFO] 127.0.0.1 - - [06/Oct/2022 21:15:14] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:15:43,600 [INFO]  * Detected change in 'C:\\Users\\S_Kri\\PycharmProjects\\Course_4-1\\app.py', reloading
+2022-10-06 21:15:43,734 [INFO]  * Restarting with stat
+2022-10-06 21:15:44,299 [WARNING]  * Debugger is active!
+2022-10-06 21:15:44,310 [INFO]  * Debugger PIN: 777-380-062
+2022-10-06 21:28:20,828 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-06 21:28:20,828 [INFO] [33mPress CTRL+C to quit[0m
+2022-10-06 21:28:20,828 [INFO]  * Restarting with stat
+2022-10-06 21:28:21,389 [WARNING]  * Debugger is active!
+2022-10-06 21:28:21,398 [INFO]  * Debugger PIN: 777-380-062
+2022-10-06 21:28:28,866 [INFO] 127.0.0.1 - - [06/Oct/2022 21:28:28] "[35m[1mGET /post/сьмст HTTP/1.1[0m" 500 -
+2022-10-06 21:28:28,999 [INFO] 127.0.0.1 - - [06/Oct/2022 21:28:28] "GET /post/сьмст?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-10-06 21:28:28,999 [INFO] 127.0.0.1 - - [06/Oct/2022 21:28:28] "GET /post/сьмст?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-10-06 21:28:29,101 [INFO] 127.0.0.1 - - [06/Oct/2022 21:28:29] "GET /post/сьмст?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-10-06 21:28:29,274 [INFO] 127.0.0.1 - - [06/Oct/2022 21:28:29] "[36mGET /post/сьмст?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-10-06 21:28:44,081 [INFO] 127.0.0.1 - - [06/Oct/2022 21:28:44] "[33mGET /ghgh HTTP/1.1[0m" 404 -
+2022-10-06 21:29:47,983 [INFO]  * Detected change in 'C:\\Users\\S_Kri\\PycharmProjects\\Course_4-1\\app.py', reloading
+2022-10-06 21:29:48,095 [INFO]  * Restarting with stat
+2022-10-06 21:29:49,040 [WARNING]  * Debugger is active!
+2022-10-06 21:29:49,045 [INFO]  * Debugger PIN: 777-380-062
+2022-10-06 21:33:26,563 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-06 21:33:26,563 [INFO] [33mPress CTRL+C to quit[0m
+2022-10-06 21:33:26,563 [INFO]  * Restarting with stat
+2022-10-06 21:33:27,171 [WARNING]  * Debugger is active!
+2022-10-06 21:33:27,182 [INFO]  * Debugger PIN: 777-380-062
+2022-10-06 21:33:32,455 [INFO] 127.0.0.1 - - [06/Oct/2022 21:33:32] "[33mGET /ghgh HTTP/1.1[0m" 404 -
+2022-10-06 21:36:56,616 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-06 21:36:56,616 [INFO] [33mPress CTRL+C to quit[0m
+2022-10-06 21:36:56,618 [INFO]  * Restarting with stat
+2022-10-06 21:36:57,049 [WARNING]  * Debugger is active!
+2022-10-06 21:36:57,055 [INFO]  * Debugger PIN: 777-380-062
+2022-10-06 21:37:30,544 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:30] "GET / HTTP/1.1" 200 -
+2022-10-06 21:37:30,667 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:30] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:37:30,685 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:30] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:37:30,689 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:30] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:37:32,629 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:32] "GET /users/leo HTTP/1.1" 200 -
+2022-10-06 21:37:32,662 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:32] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:37:32,671 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:32] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:37:32,679 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:32] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:37:37,998 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:37] "GET /users/митмсит HTTP/1.1" 200 -
+2022-10-06 21:37:42,796 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:42] "GET / HTTP/1.1" 200 -
+2022-10-06 21:37:42,834 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:42] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:37:42,859 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:42] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:37:42,859 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:42] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:37:51,804 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:51] "GET /users/leo HTTP/1.1" 200 -
+2022-10-06 21:37:51,841 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:51] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:37:51,862 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:51] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:37:51,862 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:51] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:37:57,174 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:57] "GET /post/1 HTTP/1.1" 200 -
+2022-10-06 21:37:57,217 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:57] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:37:57,226 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:57] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:37:57,226 [INFO] 127.0.0.1 - - [06/Oct/2022 21:37:57] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:38:01,206 [INFO] 127.0.0.1 - - [06/Oct/2022 21:38:01] "[35m[1mGET /post/аатппао HTTP/1.1[0m" 500 -
+2022-10-06 21:38:01,246 [INFO] 127.0.0.1 - - [06/Oct/2022 21:38:01] "GET /post/аатппао?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-10-06 21:38:01,254 [INFO] 127.0.0.1 - - [06/Oct/2022 21:38:01] "GET /post/аатппао?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-10-06 21:38:01,323 [INFO] 127.0.0.1 - - [06/Oct/2022 21:38:01] "GET /post/аатппао?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-10-06 21:38:01,471 [INFO] 127.0.0.1 - - [06/Oct/2022 21:38:01] "[36mGET /post/аатппао?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-10-06 21:39:15,659 [INFO]  * Detected change in 'C:\\Users\\S_Kri\\PycharmProjects\\Course_4-1\\app.py', reloading
+2022-10-06 21:39:15,749 [INFO]  * Restarting with stat
+2022-10-06 21:39:16,683 [WARNING]  * Debugger is active!
+2022-10-06 21:39:16,683 [INFO]  * Debugger PIN: 777-380-062
+2022-10-06 21:46:36,268 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-06 21:46:36,268 [INFO] [33mPress CTRL+C to quit[0m
+2022-10-06 21:46:36,279 [INFO]  * Restarting with stat
+2022-10-06 21:46:36,780 [WARNING]  * Debugger is active!
+2022-10-06 21:46:36,785 [INFO]  * Debugger PIN: 777-380-062
+2022-10-06 21:46:49,467 [INFO] 127.0.0.1 - - [06/Oct/2022 21:46:49] "GET / HTTP/1.1" 200 -
+2022-10-06 21:46:49,595 [INFO] 127.0.0.1 - - [06/Oct/2022 21:46:49] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:46:49,621 [INFO] 127.0.0.1 - - [06/Oct/2022 21:46:49] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:46:49,621 [INFO] 127.0.0.1 - - [06/Oct/2022 21:46:49] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:46:53,772 [INFO] 127.0.0.1 - - [06/Oct/2022 21:46:53] "GET /users/leo HTTP/1.1" 200 -
+2022-10-06 21:46:53,802 [INFO] 127.0.0.1 - - [06/Oct/2022 21:46:53] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:46:53,824 [INFO] 127.0.0.1 - - [06/Oct/2022 21:46:53] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:46:53,824 [INFO] 127.0.0.1 - - [06/Oct/2022 21:46:53] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:47:00,098 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:00] "GET /post/1 HTTP/1.1" 200 -
+2022-10-06 21:47:00,141 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:00] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:47:00,160 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:00] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:47:00,160 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:00] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:47:11,447 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:11] "GET /post/22 HTTP/1.1" 200 -
+2022-10-06 21:47:18,549 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:18] "GET /post/1 HTTP/1.1" 200 -
+2022-10-06 21:47:18,590 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:18] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-06 21:47:18,606 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:18] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-06 21:47:18,606 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:18] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-06 21:47:25,232 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:25] "GET /post/22 HTTP/1.1" 200 -
+2022-10-06 21:47:31,137 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:31] "[35m[1mGET /post/bbm HTTP/1.1[0m" 500 -
+2022-10-06 21:47:31,165 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:31] "GET /post/bbm?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-10-06 21:47:31,173 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:31] "GET /post/bbm?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-10-06 21:47:31,266 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:31] "GET /post/bbm?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-10-06 21:47:31,404 [INFO] 127.0.0.1 - - [06/Oct/2022 21:47:31] "[36mGET /post/bbm?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-10-07 08:33:40,563 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-07 08:33:40,563 [INFO] [33mPress CTRL+C to quit[0m
+2022-10-07 08:33:40,569 [INFO]  * Restarting with stat
+2022-10-07 08:33:40,936 [WARNING]  * Debugger is active!
+2022-10-07 08:33:40,942 [INFO]  * Debugger PIN: 777-380-062
+2022-10-07 08:33:50,253 [INFO] 127.0.0.1 - - [07/Oct/2022 08:33:50] "GET / HTTP/1.1" 200 -
+2022-10-07 08:33:50,354 [INFO] 127.0.0.1 - - [07/Oct/2022 08:33:50] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-07 08:33:50,370 [INFO] 127.0.0.1 - - [07/Oct/2022 08:33:50] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-07 08:33:50,378 [INFO] 127.0.0.1 - - [07/Oct/2022 08:33:50] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-07 08:33:57,325 [INFO] 127.0.0.1 - - [07/Oct/2022 08:33:57] "GET /post/2 HTTP/1.1" 200 -
+2022-10-07 08:33:57,365 [INFO] 127.0.0.1 - - [07/Oct/2022 08:33:57] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2022-10-07 08:33:57,373 [INFO] 127.0.0.1 - - [07/Oct/2022 08:33:57] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2022-10-07 08:33:57,373 [INFO] 127.0.0.1 - - [07/Oct/2022 08:33:57] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2022-10-07 08:34:01,972 [INFO] 127.0.0.1 - - [07/Oct/2022 08:34:01] "GET /post/прп HTTP/1.1" 200 -
