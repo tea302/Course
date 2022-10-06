@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template, send_from_directory, jsonify
 
+import logging
 
 from utils import *
 
@@ -9,11 +10,14 @@ import os
 POST_PATH = os.path.join("data", "posts.json")
 UPLOAD_FOLDER = os.path.join("uploads", "images")
 IMG_FOLDER = os.path.join("static", "img")
-
+LOG_FOLDER = os.path.join('logs', 'api.log')
 
 
 app = Flask(__name__)
 
+app.config['JSON_AS_ASCII'] = False
+
+logging.basicConfig(filename=LOG_FOLDER, level=logging.INFO, format=f'%(asctime)s [%(levelname)s] %(message)s')
 
 @app.route("/")
 def page_index():
@@ -47,10 +51,10 @@ def page_post(path):
     :return:
     """
 
-    result = get_post_by_pk(path)
+    result = get_post_by_pk(int(path))
 
     try:
-        com = get_comments_by_post_id(path)
+        com = get_comments_by_post_id(int(path))
     except ValueError:
         return "Пост не найден"
 
@@ -139,7 +143,7 @@ def page_not_found(e):
     """
     Обработчик для не существующих страниц
     """
-    return jsonify(error=str(e)), 404
+    return str(e), 404
 
 
 
@@ -148,7 +152,37 @@ def internal_server_error(e):
     """
     Обработчик для ошибок сервера
     """
-    return jsonify(error=str(e)), 500
+    return str(e), 500
+
+
+
+@app.route("/api/posts")
+def api_post():
+    """
+    представление, которое обрабатывает запрос GET /api/posts
+    и возвращает полный список постов в виде JSON-списка
+    """
+
+    results = get_posts_all()
+
+    app.logger.info('Query')
+
+    return jsonify(results)
+
+
+@app.route("/api/posts/<path:path>")
+def api_post_id(path):
+    """
+    представление, которое обрабатывает запрос GET /api/posts/<post_id>
+    и возвращает один пост в виде JSON-словаря
+    """
+
+    result = get_post_by_pk(int(path))
+
+    app.logger.info('Query')
+
+    return jsonify(result)
+
 
 
 if __name__ == '__main__':
