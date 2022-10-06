@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, send_from_directory, jsonify
+from flask import Flask, request, render_template, jsonify
 
 import logging
 
@@ -8,8 +8,8 @@ from utils import *
 import os
 
 POST_PATH = os.path.join("data", "posts.json")
-UPLOAD_FOLDER = os.path.join("uploads", "images")
-IMG_FOLDER = os.path.join("static", "img")
+# UPLOAD_FOLDER = os.path.join("uploads", "images")
+# IMG_FOLDER = os.path.join("static", "img")
 LOG_FOLDER = os.path.join('logs', 'api.log')
 
 app = Flask(__name__)
